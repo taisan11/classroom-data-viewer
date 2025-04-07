@@ -10,7 +10,7 @@ export default function Work(props: { work: classroom_v1.Schema$CourseWork,"data
                     return (
                         <div id={material.driveFile.driveFile?.id!}>
                             <a href={material.driveFile.driveFile.alternateLink!} target="_blank" rel="noopener noreferrer">
-                                {material.driveFile.driveFile.title}
+                                {material.driveFile.driveFile.title}|Gdriveだよ
                             </a>
                         </div>
                     );
@@ -28,7 +28,7 @@ export default function Work(props: { work: classroom_v1.Schema$CourseWork,"data
                     return (
                         <div id={material.youtubeVideo.id!}>
                             <a href={material.youtubeVideo.alternateLink!} target="_blank" rel="noopener noreferrer">
-                                {material.youtubeVideo.title}
+                                {material.youtubeVideo.title}|youtubeだよ
                             </a>
                         </div>
                     );

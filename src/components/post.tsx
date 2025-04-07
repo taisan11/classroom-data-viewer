@@ -2,14 +2,14 @@ import {type classroom_v1} from "@googleapis/classroom/v1"
 
 export default function Post(props: { post: classroom_v1.Schema$Announcement,"data-index":number }) {
     return (
-        <div data-index={props["data-index"]} class="post" style={{border:"1px solid #ccc", padding: "10px", margin: "10px 0","content-visibility": "auto"}}>
+        <div data-index={props["data-index"]} class="post" style={{border:"1px solid #ccc", padding: "10px", margin: "10px 0"}}>
             <p>{props.post.text}</p>
             {props.post.materials && props.post.materials.map((material) => {
                 if (material.driveFile?.driveFile) {
                     return (
                         <div id={material.driveFile.driveFile?.id!}>
                             <a href={material.driveFile.driveFile.alternateLink!} target="_blank" rel="noopener noreferrer">
-                                {material.driveFile.driveFile.title}
+                                {material.driveFile.driveFile.title}|Gdriveだよ
                             </a>
                         </div>
                     );
@@ -27,7 +27,7 @@ export default function Post(props: { post: classroom_v1.Schema$Announcement,"da
                     return (
                         <div id={material.youtubeVideo.id!}>
                             <a href={material.youtubeVideo.alternateLink!} target="_blank" rel="noopener noreferrer">
-                                {material.youtubeVideo.title}
+                                {material.youtubeVideo.title}|youtubeだよ
                             </a>
                         </div>
                     );
